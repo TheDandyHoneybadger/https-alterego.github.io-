@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Selection</title>
+</head>
+<style>
+  /* Load the custom font */
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('BreeAlEgo.ttf') format('ttf'), /* specify font formats */
+    /* Add more font formats as needed, like 'ttf', 'otf', etc. */
+  }
+
+  body {
+    /* Apply a wider gradient background */
+    background: linear-gradient(135deg, #0097B2, #174D57, #0097B2);
+    background-size: 200% 200%;
+    background-position: 0 0;
+    animation: gradientAnimation 10s ease infinite;
+    margin: 0;
+    font-family: 'CustomFont', BreeAlEgo;
+    touch-action: manipulation;
+    text-wrap: pretty;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 400px;
+    padding: 20px;
+    background: #0b0d12;
+    border-radius: 10px;
+    text-align: center;
+
+  }
+
+  label {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #444;
+    color: #fff;
+    margin-bottom: 15px;
+	font-family: 'CustomFont', BreeAlEgo;
+  }
+
+  select option {
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    background: #0097B2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+	font-family: 'CustomFont', BreeAlEgo;
+  }
+
+  input[type="submit"]:hover {
+    background: #174D57;
+  }
+
+  /* Style for the logo */
+  .logo {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+
+</style>
+<body>
+<img class="logo glow" src="logo.png" alt="Your Logo">
+
+    <div class="container">
+        <form action="life.php" method="post">
+            <label for="your_hero">Alter Egos:</label>
+            <select name="your_hero" id="your_hero">
+				<option value="">Selecione</option>
+                <option value="Lux, O Incendiário">Lux, O Incendiário</option>
+                <option value="Spark">Spark</option>
+				<option value="Wolfsbane">Wolfsbane</option>
+				<option value="Kimerah, A Caçadora de R.">Kimerah, A Caçadora</option>
+                <option value="Void">Void</option>
+            </select>
+            
+            <br>
+            
+           
+            <select name="opponent_hero" id="opponent_hero">
+				<option value="">Selecione</option>
+                <option value="Lux, O Incendiário">Lux, O Incendiário</option>
+                <option value="Spark">Spark</option>
+				<option value="Wolfsbane">Wolfsbane</option>
+				<option value="Kimerah, A Caçadora de R.">Kimerah, A Caçadora</option>
+                <option value="Void">Void</option>
+            </select>
+            
+            <br>
+            
+            <input type="submit" value="Ir">
+        </form>
+    </div>
+</body>
+</html>
